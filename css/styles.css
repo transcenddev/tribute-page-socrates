@@ -134,16 +134,16 @@ body {
   margin: auto;
 }
 
-#quote-section .quote h3, h4 {
+#quote-section .quote h3, span {
   font-size: 40px
 }
 
 .quote h3 {
   color: #d7d2cc;
 }
-
-.quote h4 {
+.quote span {
   color: #304352;
+  margin-left: 10px;
 }
 
 #quote-section p {
