@@ -117,7 +117,6 @@ footer {
 /* Change the style of the page when the screen size is less than 768px. */
 
 @media only screen and (max-width: 48em) {
-
   .container {
     width: 70%;
   }
