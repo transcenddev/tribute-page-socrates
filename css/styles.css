@@ -1,11 +1,6 @@
-@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;700&display=swap');
-
-
-/* ====== Global Styles ====== */
-* {
-  margin: 0;
-  padding: 0;
-  font-family: 'Inter';
+*,
+*::before,
+*::after {
   box-sizing: border-box;
 }
 
@@ -16,195 +11,132 @@ html {
 
 body {
   background: linear-gradient(to right, #304352, #d7d2cc);
-}
-
-
-
-/*  =======  Showcase section ======= */
-
-#showcase-section {
-  display: flex;
-  justify-content: space-around;
-  align-items: center;
   color: #fff;
-  height: 100vh;
+  margin: 0;
+  font-family: 'Inter', sans-serif;
+  font-size: 1rem;
 }
 
-.socrates-info {
-  flex-basis: 40% ;
-  padding: 20px 20px 30px 20px;
+p {
+  line-height: 1.5;
 }
 
-.socrates-info h1 {
-  padding-bottom: 20px;
-  font-weight: 700;
-  font-size: 46px;
-  line-height: 56px;
-  width: max-content;
+.container {
+  width: 80%;
+  max-width: 1200px;
+  margin: 0 auto;
 }
 
-.socrates-info p {
-  padding-bottom: 30px;
-}
-
-/* Change the width and the height of 3D Model*/
-.socrates-3dmodel model-viewer{
-  width: 600px;
-  height: 600px;
-}
-
-/* Create a custom button */
-.read-more-btn {
-  background: #fff;
-  font-size: 16px;
-  height: 35px;
-  width: 120px;
-  border: none;
-  border-radius: 5px;
-  box-shadow: rgba(0, 0, 0, 0.15) 1.95px 1.95px 2.6px;
-  /* make the transitions smooth */
-  transition: all 0.4s ease;
-}
-
-.read-more-btn a {
-  text-decoration: none;
-  color: #304352;
-}
-
-/* When hover, transform the scale */
-.read-more-btn:hover {
-  transform: scale(1.04);
-}
-
-/* When active,  change the oapcity */
-.read-more-btn:active {
-  opacity: 0.7  ;
-}
-
-/* ======  Life section ====== */
-
-#life-section {
+.btn {
+  display: inline-block;
+  background-color: #fff;
   color: #000;
-  padding: 0 20px;
+  text-decoration: none;
+  border-radius: 50px;
+  padding: 0.5rem 1.3rem;
 }
 
-#life-section .content {
-  background-color: #FFF;
-  color: #304352;
-  border: 1px solid #ccc;
-  border-radius: 5px;
-  padding: 40px 80px;
-  margin: 50px 50px 30px 50px;
-  /* Making the transition smooth. */
-  transition: all 0.3s ease;
-  /* Adding a shadow to the box. */
-  box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+.btn:hover,
+.btn:focus {
+  opacity: 0.7;
 }
 
-/* when the mouse is over the content, make it bigger.*/
-.content:hover {
-  transform: scale(1.02);
+/*  =======  Hero Section ======= */
+
+#hero {
+  padding: 250px 0;
 }
 
-.content h2 {
-  text-align: center;
-  margin-bottom: 20px;
-  position: relative;
+h1 {
+  font-size: 3rem;
+  font-weight: 700;
+  letter-spacing: 1.5px;
 }
 
-.content p {
-  text-align: justify;
-  text-indent: 20px;
+#hero p {
+  display: inline-block;
+  margin-bottom: 3em;
 }
 
-/* ======  Quote ======== */
+#hero .container {
+  display: grid;
+  grid-template-columns: 1fr 0.5fr;
+  column-gap: 1em;
+}
 
-#quote-section {
+.socrates--3dmodel {
   width: 100%;
-  height: 100vh;
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  height: 100%;
 }
 
-#quote-section .quote {
-  display: flex;
-  justify-content: space-between;
-  width: 69%;
-  margin: auto;
+
+/* ======= Biography Section ====== */
+
+#biography {
+  background-color: #fff;
+  color: #000;
+  text-align: justify;
+  text-justify: inner-word;
+
+  padding: 3em 0;
 }
 
-#quote-section .quote h3, span {
-  font-size: 40px
+#biography .container {
+  margin-bottom: 5em;
 }
 
-.quote h3 {
+
+/* ======= Quote Section ====== */
+
+#quote {
+  padding: 250px 0;
+  text-align: center;
+}
+
+h3 {
   color: #d7d2cc;
+  font-size: 2.7rem;
 }
-.quote span {
+
+span {
   color: #304352;
-  margin-left: 10px;
+  margin-left: 0.3em;
 }
 
-#quote-section p {
-  width: 67%;
-  margin: auto;
+/* ======= Footer Section ====== */
+
+footer {
   color: #fff;
-  text-align: center;
-  padding-top: 20px;
-}
-
-
-
-/* ======= Footer ====== */
-
-#main-footer {
-  color: #fff;
-  text-align: center;
   font-size: small;
-  padding-bottom: 20px;
+  text-align: center;
+
+  padding-bottom: 1em;
 }
-
-
-
 
 /* Change the style of the page when the screen size is less than 768px. */
-@media(max-width:768px){
-  #showcase-section {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    flex-direction: column;
+
+@media only screen and (max-width: 48em) {
+
+  .container {
+    width: 70%;
   }
 
-  .socrates-info h1 {
-    font-size: 30px;
+  #hero {
+    padding: 200px 0;
   }
 
-  .socrates-info {
-    font-size: 15px;
+  #hero .container {
+    display: grid;
+    grid-template-columns: 1fr;
+    column-gap: 1em;
+  }
+
+  #hero p {
     text-align: justify;
+    text-justify: inter-word;
   }
 
-  .read-more-btn {
-    height: 25px;
-    width: 100px;
-    font-size: 16px;
-  }
-
-  .socrates-3dmodel model-viewer{
-    width: 200px;
-    height: 400px;
-  }
-
-  #life-section .content {
-    padding: 40px 20px;
-    margin: 50px 30px 30px 30px;
-    font-size: 16px;
+  .socrates--3dmodel {
+    display: none;
   }
 }
-
-
-
-
-
