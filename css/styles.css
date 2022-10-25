@@ -1,10 +1,10 @@
+/* ======= Global Styles ======= */
 *,
 *::before,
 *::after {
   box-sizing: border-box;
 }
 
-/* Makes the scrolling smooth. */
 html {
   scroll-behavior: smooth;
 }
@@ -44,7 +44,9 @@ p {
 /*  =======  Hero Section ======= */
 
 #hero {
-  padding: 250px 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
 }
 
 h1 {
@@ -59,17 +61,34 @@ h1 {
 }
 
 #hero .container {
-  display: grid;
-  grid-template-columns: 1fr 0.5fr;
-  column-gap: 1em;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
 }
 
-.socrates--3dmodel {
+.hero__text {
+  flex-basis: 60%;
+}
+
+.hero__3d {
+  flex-basis: 30%;
+}
+
+@media (max-width: 40rem) {
+  .hero__3d {
+    display: none;
+  }
+
+  .hero__text {
+    flex-basis: 100%;
+  }
+}
+
+.socrates-3dmodel {
   width: 100%;
   height: 100%;
   min-height: 400px;
 }
-
 
 /* ======= Biography Section ====== */
 
@@ -85,23 +104,29 @@ h1 {
 #biography .container {
   margin-bottom: 5em;
 }
-
-
+  
 /* ======= Quote Section ====== */
 
 #quote {
-  padding: 250px 0;
+  display: grid;
+  place-items: center;
+  height: 100vh;
   text-align: center;
 }
 
-h3 {
+.quote__text h3 {
   color: #d7d2cc;
-  font-size: 2.7rem;
+  font-size: 2rem;
 }
 
-span {
+@media (max-width: 40rem) {
+  .quote__text h3 {
+    font-size: 1.3rem;
+  }
+}
+
+.quote__text span {
   color: #304352;
-  margin-left: 0.3em;
 }
 
 /* ======= Footer Section ====== */
@@ -110,33 +135,5 @@ footer {
   color: #fff;
   font-size: small;
   text-align: center;
-
   padding-bottom: 1em;
-}
-
-/* Change the style of the page when the screen size is less than 768px. */
-
-@media only screen and (max-width: 48em) {
-  .container {
-    width: 70%;
-  }
-
-  #hero {
-    padding: 200px 0;
-  }
-
-  #hero .container {
-    display: grid;
-    grid-template-columns: 1fr;
-    column-gap: 1em;
-  }
-
-  #hero p {
-    text-align: justify;
-    text-justify: inter-word;
-  }
-
-  .socrates--3dmodel {
-    display: none;
-  }
 }
