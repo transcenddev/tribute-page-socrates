@@ -21,6 +21,14 @@ p {
   line-height: 1.5;
 }
 
+@media only screen and (max-width: 40em) {
+  p {
+    font-size: .9rem;
+    line-height: 1.3;
+  }
+
+}
+
 .container {
   width: 80%;
   max-width: 1200px;
@@ -90,19 +98,23 @@ h1 {
   min-height: 400px;
 }
 
-/* ======= Biography Section ====== */
+/* ======= main Section ====== */
 
-#biography {
+#main {
   background-color: #fff;
   color: #000;
-  text-align: justify;
-  text-justify: inner-word;
   padding: 3em 0;
 }
 
-#biography .container {
-  margin-bottom: 5em;
+.primary-content {
+  text-align: justify;
+  text-justify: inner-word;
 }
+
+.section {
+  margin-bottom: 2em;
+}
+
 
 /* ======= Quote Section ====== */
 
