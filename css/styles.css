@@ -97,7 +97,6 @@ h1 {
   color: #000;
   text-align: justify;
   text-justify: inner-word;
-
   padding: 3em 0;
 }
 
@@ -111,11 +110,14 @@ h1 {
   display: grid;
   place-items: center;
   height: 100vh;
-  text-align: center;
+}
+
+.quote__text {
+  width: 80%;
+  margin: 0 auto;
 }
 
 .quote__text h3 {
-  color: #d7d2cc;
   font-size: 2rem;
 }
 
@@ -125,14 +127,9 @@ h1 {
   }
 }
 
-.quote__text span {
-  color: #304352;
-}
-
 /* ======= Footer Section ====== */
 
 footer {
-  color: #fff;
   font-size: small;
   text-align: center;
   padding-bottom: 1em;
